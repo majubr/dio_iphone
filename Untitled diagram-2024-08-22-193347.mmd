@@ -1,0 +1,37 @@
+classDiagram
+    Iphone <|-- AparelhoTelefonico
+    Iphone <|-- ReprodutorMusical
+    Iphone <|-- NavegadorInternet
+ 
+    Iphone : +ligar(String numero)
+    Iphone : +atender()
+    Iphone : +iniciarCorreioVoz()
+    Iphone : +selecionarMusica(String musica)
+    Iphone : +tocar()
+    Iphone : +pausar()
+    Iphone : +adicionarNovaAba()
+    Iphone : +atualizarPagina()
+ 
+
+    class AparelhoTelefonico{
+      -String numero
+     
+      +ligar(String numero)
+      +atender()
+      +iniciarCorreioVoz()
+    }
+    class ReprodutorMusical{
+      -string musica
+
+      +selecionarMusica(String musica)
+      +tocar()
+      +pausar()
+     
+    }
+    class NavegadorInternet{
+      -String url
+
+      -exibirPagina(String url)
+      +adicionarNovaAba()
+      +atualizarPagina()
+    }
